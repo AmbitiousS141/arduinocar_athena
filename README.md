@@ -13,6 +13,7 @@ This lil guy is made of:
 - IR sensors
 - Wires  
 
+
 He's my first project using my Arduino :D  
 
 The static website to go along with it has tips and tricks I've learned along the way. INSERT WEBSITE LINK HERE
@@ -24,3 +25,9 @@ I'm part of a robotics club, and when I asked the electrical lead how I could st
 Swoop was built, wired up and coded over the span of one day. (Yeah... I'll work on time management skills soon TT) Check out my [Project Journal](JOURNAL.md) for more info!
 
 ## What I've learned:
+
+## Made for Athena :D
+**Total project time:** _ hours and _ minutes  
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)]  
+
+*Thanks for reading!* 🩷💛
