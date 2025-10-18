@@ -1,5 +1,5 @@
 # arduinocar_athena
-Say hi to Swoop, a car made of firsts, cardboard and tape (and some proper materials I promise-), and very importantly... hopes and dreams TT.  
+Say hi to *Swoop*, a car made of firsts, cardboard and tape (and some proper materials I promise-), and very importantly... hopes and dreams TT.  
 
 Why is he named Swoop? Well, take a look.  
 ![alt text](image.png)
@@ -11,15 +11,15 @@ This lil guy is made of:
 - DC motors
 - L298N Driver
 - IR sensors
-- Wires
+- Wires  
 He's my first project using my Arduino :D  
 
-The static website to go along with it has tips and tricks I've learned along the way.
+The static website to go along with it has tips and tricks I've learned along the way. INSERT WEBSITE LINK HERE
 
 ## The why:
 I'm part of a robotics club, and when I asked the electrical lead how I could start learning wiring, she suggested a project using an Arduino. My 7-year-old brother goes crazy for cars, so I figured I'd make him an early birthday gift :D And to share what I've learned as well as refresh my front-end language knowledge, I built the website to go along with this hardware project.  
 
 ## The how:
-Swoop was built, wired up and coded over the span of one day. (Yeah... I'll work on time management skills soon TT) Check out my Project Journal [JOURNAL](JOURNAL.md) for more info!
+Swoop was built, wired up and coded over the span of one day. (Yeah... I'll work on time management skills soon TT) Check out my [Project Journal](JOURNAL.md) for more info!
 
 ## What I've learned:
