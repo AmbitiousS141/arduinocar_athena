@@ -28,6 +28,9 @@ Swoop was built, wired up and coded over the span of one day. (Yeah... I'll work
 
 ## Made for Athena :D
 **Total project time:** _ hours and _ minutes  
-[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)]  
+![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)  
+
+
+
 
 *Thanks for reading!* 🩷💛
