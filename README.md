@@ -12,6 +12,7 @@ This lil guy is made of:
 - L298N Driver
 - IR sensors
 - Wires  
+
 He's my first project using my Arduino :D  
 
 The static website to go along with it has tips and tricks I've learned along the way. INSERT WEBSITE LINK HERE
