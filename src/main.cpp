@@ -119,66 +119,66 @@ void loop() {
 }
 
 void Forward() {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 255);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 255);
+  analogWrite(in1, 0);
+  analogWrite(in2, 255);
+  analogWrite(in3, 0);
+  analogWrite(in4, 255);
 }
 
 void Backward() {
-  digitalWrite(in1, 255);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 255);
-  digitalWrite(in4, 0);
+  analogWrite(in1, 255);
+  analogWrite(in2, 0);
+  analogWrite(in3, 255);
+  analogWrite(in4, 0);
 }
 
 void Right() {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 255);
+  analogWrite(in1, 0);
+  analogWrite(in2, 0);
+  analogWrite(in3, 0);
+  analogWrite(in4, 255);
 }
 
 void Left() {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 255);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 0);
+  analogWrite(in1, 0);
+  analogWrite(in2, 255);
+  analogWrite(in3, 0);
+  analogWrite(in4, 0);
 }
 
 void Stop() {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 0);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 0);
+  analogWrite(in1, 0);
+  analogWrite(in2, 0);
+  analogWrite(in3, 0);
+  analogWrite(in4, 0);
 }
 
 void ForwardRight() {
-  digitalWrite(in1, 0);
-  digitalWrite(in2, 255);
-  digitalWrite(in3, 0);
+  analogWrite(in1, 0);
+  analogWrite(in2, 255);
+  analogWrite(in3, 0);
   analogWrite(in4, 128);
 }
 
 void ForwardLeft() {
-  digitalWrite(in1, 0);
+  analogWrite(in1, 0);
   analogWrite(in2, 128);
-  digitalWrite(in3, 0);
-  digitalWrite(in4, 255);
+  analogWrite(in3, 0);
+  analogWrite(in4, 255);
 }
 
 void BackwardRight() {
  analogWrite(in1, 128);
- digitalWrite(in2, 0);
- digitalWrite(in3, 255);
- digitalWrite(in4, 0);
+ analogWrite(in2, 0);
+ analogWrite(in3, 255);
+ analogWrite(in4, 0);
 }
 
 void BackwardLeft() {
-  digitalWrite(in1, 255);
-  digitalWrite(in2, 0);
+  analogWrite(in1, 255);
+  analogWrite(in2, 0);
   analogWrite(in3, 128);
-  digitalWrite(in4, 0);
+  analogWrite(in4, 0);
 }
 
 // pins on arduino with tilde beside them support analogWrite()
