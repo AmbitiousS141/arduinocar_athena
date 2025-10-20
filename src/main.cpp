@@ -7,6 +7,8 @@ const int in1 = 3;
 const int in2 = 5;
 const int in3 = 6;
 const int in4 = 9;
+const int ENA = 10;
+const int ENB = 11;
 
 enum MovementState {  // defines states car can be in
   STOPPED, 
@@ -40,18 +42,20 @@ void setup() {
   pinMode(in2, OUTPUT);
   pinMode(in3, OUTPUT);
   pinMode(in4, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
 
   Stop();
 }
 
 void loop() {      
 // this next part is here to figure out the codes of buttons - used this when I added FORWARD_s and BACKWARD_s           
-//  if (IrReceiver.decode()) { 
-//  uint8_t cmd = IrReceiver.decodedIRData.command;
-//  Serial.print("Received IR command: 0x");
-//  Serial.println(cmd, HEX);  // Print the command in HEX
-//  IrReceiver.resume();
-//}
+  /*if (IrReceiver.decode()) { 
+    uint8_t cmd = IrReceiver.decodedIRData.command;
+    Serial.print("Received IR command: 0x");
+    Serial.println(cmd, HEX);  // Print the command in HEX
+    IrReceiver.resume();
+  } */
 
   if (IrReceiver.decode()) {
     uint8_t cmd = IrReceiver.decodedIRData.command;
@@ -67,7 +71,7 @@ void loop() {
         Backward();
         currentState = BACKWARD;
         break;
-      case 0x08: // 4 
+      case 0x8: // 4 
         Left();
         currentState = LEFT;
         break;
@@ -83,7 +87,7 @@ void loop() {
         ForwardLeft();
         currentState = FORWARD_LEFT;
         break;
-      case 0x0: // 3
+      case 0x5E: // 3
         ForwardRight();
         currentState = FORWARD_RIGHT;
         break;
@@ -102,83 +106,98 @@ void loop() {
     IrReceiver.resume();
   }
 
-  // Keep motors running in current state
-  switch (currentState) {
-    case FORWARD: Forward(); break;
-    case BACKWARD: Backward(); break;
-    case LEFT: Left(); break;
-    case RIGHT: Right(); break;
-    case FORWARD_LEFT: ForwardLeft(); break;
-    case FORWARD_RIGHT: ForwardRight(); break;
-    case BACKWARD_LEFT: BackwardLeft(); break;
-    case BACKWARD_RIGHT: BackwardRight(); break;
-    case STOPPED: Stop(); break;
-  }
-
   delay(10); // to not overload components
 }
 
+
 void Forward() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 255);
-  analogWrite(in3, 0);
-  analogWrite(in4, 255);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
 void Backward() {
-  analogWrite(in1, 255);
-  analogWrite(in2, 0);
-  analogWrite(in3, 255);
-  analogWrite(in4, 0);
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+
+  analogWrite(ENA, 255);
+  analogWrite(ENB, 255);
 }
 
 void Right() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 0);
-  analogWrite(in3, 0);
-  analogWrite(in4, 255);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+
+  analogWrite(ENA, 0);     
+  analogWrite(ENB, 255);   
 }
 
 void Left() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 255);
-  analogWrite(in3, 0);
-  analogWrite(in4, 0);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+
+  analogWrite(ENA, 255);   
+  analogWrite(ENB, 0);     
 }
 
 void Stop() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 0);
-  analogWrite(in3, 0);
-  analogWrite(in4, 0);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
 }
 
 void ForwardRight() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 255);
-  analogWrite(in3, 0);
-  analogWrite(in4, 128);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);  
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);  
+
+  analogWrite(ENA, 75);    
+  analogWrite(ENB, 255);    
 }
 
 void ForwardLeft() {
-  analogWrite(in1, 0);
-  analogWrite(in2, 128);
-  analogWrite(in3, 0);
-  analogWrite(in4, 255);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);  
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);  
+
+  analogWrite(ENA, 255);    
+  analogWrite(ENB, 75);    
 }
 
 void BackwardRight() {
- analogWrite(in1, 128);
- analogWrite(in2, 0);
- analogWrite(in3, 255);
- analogWrite(in4, 0);
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);   
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);   
+
+  analogWrite(ENA, 75);    
+  analogWrite(ENB, 255);    
 }
 
 void BackwardLeft() {
-  analogWrite(in1, 255);
-  analogWrite(in2, 0);
-  analogWrite(in3, 128);
-  analogWrite(in4, 0);
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);   
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);   
+
+  analogWrite(ENA, 255);    
+  analogWrite(ENB, 75);    
 }
 
 // pins on arduino with tilde beside them support analogWrite()

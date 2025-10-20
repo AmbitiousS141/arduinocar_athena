@@ -2,7 +2,7 @@
 ## Total hardware time: 5 hours 13 minutes
 #### Session 1 (3 hours 14 minutes)
 Gathered all my materials and started at 10:40 in the morning :D  
-![alt text](image-1.png)  
+![alt text](images/image-1.png)  
 
 I built a chassis, mounted the wheels and motors, drilled holes to arrange wires, and drilled more holes to mount the battery cell.  
 
@@ -13,7 +13,7 @@ He also brought over a multimeter and taught me how to use it by testing out bat
 When I asked him for tips on wiring, he told me to simply make it look organized and professional. He also showed me a few different arrangements with the setup I had then.  
 
 I got hungry and ended the session at 1:54 for a lunch break. By then, Swoop looked like this:  
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 #### Session 2 (1 hour 59 minutes)
 Forgot to take a picture when I came back at 2:15 :C sorry y'all  
@@ -21,4 +21,7 @@ Forgot to take a picture when I came back at 2:15 :C sorry y'all
 I started by mounting the L298N on the chassis. Oh how this made me wish I wish I had a 3D printer; I built the section that would keep the motor driver on using cardboard instead. I then connected the motor's wires to the outputs, where my neighbor helped me out some more by teaching me how it's done and reminding me to yank at the wires after tightening the screws to make sure they're secure. After that, he taught me how to solder wires, and I used this to set up the switch. I was also taught multiple ways to cut wires' protective case - with a wire stripper, a side cutter, or even using a soldering iron to melt it off. That last method proved to be most efficient XD Finally, I set up and connected the Arduino and IR sensor in the same way as the motor driver TT.
 
 I adjusted the wires to be more neat, and *that's* when I decided what to title this project. Then I ran off for dessert (have you ever heard of savarines? You really need to try them) at 4:14. The hardware part was all done!  
-![alt text](image-3.png)
+![alt text](images/image-3.png)
+
+##### Unplanned Session 3 (no time tracked)
+While coding, I realized I wanted the car to be able to take larger turns. For that, I had to be able to control the motors' speeds. I spent lots of time trying to "debug" my code until I realized that it wasn't a software issue: my hardware wasn't capable of it in that moment. Essentially, the L298's in1-4 pins control the motor's direction, not speed. I went back to the garage to remove the jumpers from the L298's ENA and ENB, and then add the wires necessary.
