@@ -1,5 +1,5 @@
 # arduinocar_athena
-**Total project time:** _ hours and _ minutes  
+**Total project time:** 11 hours and 26 minutes (building + coding)
 <br><br>
 Say hi to *Swoop*, a car made of firsts, cardboard and tape (and some proper materials I promise-), and very importantly... hopes and dreams TT.  
 
