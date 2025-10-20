@@ -1,9 +1,9 @@
 # arduinocar_athena
+**Total project time:** _ hours and _ minutes 
 Say hi to *Swoop*, a car made of firsts, cardboard and tape (and some proper materials I promise-), and very importantly... hopes and dreams TT.  
 
 Why is he named Swoop? Well, take a look.  
 ![alt text](images/image.png)  
-
 He styles his hair that way.  
 
 ## The what:
@@ -34,8 +34,7 @@ Swoop was built, wired up and coded over the span of a weekend. (Yeah... I'll wo
 - Understanding the Arduino: tildes beside pins means they can handle PWM
 - Never blame bugs on low-quality hardware. It's like choosing the easy option out, giving up and blaming issues on something you can't control so it's not on your shoulders anymore. My neighbor immediately scolded me when I suggested my problems with the motors' speeds was a them issue XD and after hours of thinking and more of coding, it really did work out :D
 
-## Made for Athena :D
-**Total project time:** _ hours and _ minutes  
+## Made for Athena :D 
 ![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)  
 
 
